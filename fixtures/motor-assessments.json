@@ -1,1 +1,92 @@
-{"patientId":"motor-18","visits":[{"visitId":"v1","protocolVersion":2,"medicationTakenAt":"2026-08-01T08:00:00+08:00","trials":[{"trialId":"v1-left-rest","side":"left","syncPulseAt":1000},{"trialId":"v1-right-rest","side":"right","syncPulseAt":1160}]},{"visitId":"v2","protocolVersion":3,"medicationTakenAt":"2026-09-01T07:30:00+08:00","trials":[{"trialId":"v2-walk-a","status":"interrupted"},{"trialId":"v2-walk-b","status":"make-up"}]}]}
+{
+  "patientId": "motor-18",
+  "protocols": [
+    {
+      "protocolId": "pd-motor",
+      "version": 2,
+      "publishedAt": "2026-07-15T09:00:00+08:00",
+      "tasks": [
+        { "kind": "rest", "durationSeconds": 30, "cueVersion": "metronome-1.0" },
+        { "kind": "posture", "durationSeconds": 20, "cueVersion": "metronome-1.0" },
+        { "kind": "pronation-supination", "durationSeconds": 20, "cueVersion": "metronome-1.0" },
+        { "kind": "walk", "durationSeconds": 30, "cueVersion": "metronome-1.0" }
+      ]
+    },
+    {
+      "protocolId": "pd-motor",
+      "version": 3,
+      "publishedAt": "2026-08-20T09:00:00+08:00",
+      "tasks": [
+        { "kind": "rest", "durationSeconds": 30, "cueVersion": "metronome-1.0" },
+        { "kind": "posture", "durationSeconds": 20, "cueVersion": "metronome-1.0" },
+        { "kind": "pronation-supination", "durationSeconds": 20, "cueVersion": "metronome-1.0" },
+        { "kind": "walk", "durationSeconds": 30, "cueVersion": "metronome-2.0" }
+      ]
+    }
+  ],
+  "visits": [
+    {
+      "visitId": "v1",
+      "protocolId": "pd-motor",
+      "protocolVersion": 2,
+      "medicationTakenAt": "2026-08-01T08:00:00+08:00",
+      "syncPulses": [
+        { "deviceId": "wrist-L", "deviceClockAt": 1000, "wallClockAt": "2026-08-01T08:59:00.000+08:00" },
+        { "deviceId": "wrist-R", "deviceClockAt": 1160, "wallClockAt": "2026-08-01T08:59:00.000+08:00" }
+      ],
+      "trials": [
+        { "trialId": "v1-left-rest", "task": "rest", "side": "left", "deviceId": "wrist-L", "status": "completed", "deviceClockStart": 61000, "syncPulseAt": 1000, "deviations": [] },
+        { "trialId": "v1-right-rest", "task": "rest", "side": "right", "deviceId": "wrist-R", "status": "completed", "deviceClockStart": 61160, "syncPulseAt": 1160, "deviations": [] },
+        { "trialId": "v1-left-posture", "task": "posture", "side": "left", "deviceId": "wrist-L", "status": "completed", "deviceClockStart": 121000, "syncPulseAt": 1000, "deviations": [] },
+        { "trialId": "v1-right-posture", "task": "posture", "side": "right", "deviceId": "wrist-R", "status": "completed", "deviceClockStart": 121160, "syncPulseAt": 1160, "deviations": [] },
+        { "trialId": "v1-left-pronation", "task": "pronation-supination", "side": "left", "deviceId": "wrist-L", "status": "completed", "deviceClockStart": 181000, "syncPulseAt": 1000, "deviations": [] },
+        { "trialId": "v1-right-pronation", "task": "pronation-supination", "side": "right", "deviceId": "wrist-R", "status": "completed", "deviceClockStart": 181160, "syncPulseAt": 1160, "deviations": [] },
+        { "trialId": "v1-left-walk", "task": "walk", "side": "left", "deviceId": "wrist-L", "status": "completed", "deviceClockStart": 241000, "syncPulseAt": 1000, "deviations": [] },
+        { "trialId": "v1-right-walk", "task": "walk", "side": "right", "deviceId": "wrist-R", "status": "completed", "deviceClockStart": 241160, "syncPulseAt": 1160, "deviations": [] }
+      ],
+      "segments": [
+        { "segmentId": "v1-left-rest-seg1", "trialId": "v1-left-rest", "deviceClockStart": 61000, "deviceClockEnd": 91000, "samples": [0.8, 0.85, 0.9, 0.88, 0.82, 0.86, 0.84, 0.87], "deviations": [] },
+        { "segmentId": "v1-right-rest-seg1", "trialId": "v1-right-rest", "deviceClockStart": 61160, "deviceClockEnd": 91160, "samples": [0.5, 0.52, 0.49, 0.51, 0.5, 0.53, 0.48, 0.51], "deviations": [] },
+        { "segmentId": "v1-left-posture-seg1", "trialId": "v1-left-posture", "deviceClockStart": 121000, "deviceClockEnd": 141000, "samples": [0.7, 0.72, 0.68, 0.71, 0.69, 0.73, 0.7, 0.72], "deviations": [] },
+        { "segmentId": "v1-right-posture-seg1", "trialId": "v1-right-posture", "deviceClockStart": 121160, "deviceClockEnd": 141160, "samples": [0.66, 0.65, 0.67, 0.64, 0.66, 0.68, 0.65, 0.67], "deviations": [] },
+        { "segmentId": "v1-left-pronation-seg1", "trialId": "v1-left-pronation", "deviceClockStart": 181000, "deviceClockEnd": 201000, "samples": [1.1, 1.12, 1.08, 1.11, 1.09, 1.13, 1.1, 1.12], "deviations": [] },
+        { "segmentId": "v1-right-pronation-seg1", "trialId": "v1-right-pronation", "deviceClockStart": 181160, "deviceClockEnd": 201160, "samples": [1.05, 1.07, 1.04, 1.06, 1.08, 1.05, 1.07, 1.06], "deviations": [] },
+        { "segmentId": "v1-left-walk-seg1", "trialId": "v1-left-walk", "deviceClockStart": 241000, "deviceClockEnd": 271000, "samples": [0.4, 0.42, 0.39, 0.41, 0.4, 0.43, 0.38, 0.41], "deviations": [] },
+        { "segmentId": "v1-right-walk-seg1", "trialId": "v1-right-walk", "deviceClockStart": 241160, "deviceClockEnd": 271160, "samples": [0.44, 0.45, 0.43, 0.46, 0.44, 0.45, 0.42, 0.47], "deviations": [] }
+      ]
+    },
+    {
+      "visitId": "v2",
+      "protocolId": "pd-motor",
+      "protocolVersion": 3,
+      "medicationTakenAt": "2026-09-01T07:30:00+08:00",
+      "syncPulses": [
+        { "deviceId": "wrist-L", "deviceClockAt": 5000, "wallClockAt": "2026-09-01T09:58:00.000+08:00" },
+        { "deviceId": "wrist-R", "deviceClockAt": 5080, "wallClockAt": "2026-09-01T09:58:00.000+08:00" }
+      ],
+      "trials": [
+        { "trialId": "v2-left-rest", "task": "rest", "side": "left", "deviceId": "wrist-L", "status": "completed", "deviceClockStart": 125000, "syncPulseAt": 5000, "deviations": [] },
+        { "trialId": "v2-right-rest", "task": "rest", "side": "right", "deviceId": "wrist-R", "status": "completed", "deviceClockStart": 125080, "syncPulseAt": 5080, "deviations": [] },
+        { "trialId": "v2-left-posture", "task": "posture", "side": "left", "deviceId": "wrist-L", "status": "completed", "deviceClockStart": 185000, "syncPulseAt": 5000, "deviations": [] },
+        { "trialId": "v2-right-posture", "task": "posture", "side": "right", "deviceId": "wrist-R", "status": "completed", "deviceClockStart": 185080, "syncPulseAt": 5080, "deviations": [] },
+        { "trialId": "v2-left-pronation", "task": "pronation-supination", "side": "left", "deviceId": "wrist-L", "status": "completed", "deviceClockStart": 245000, "syncPulseAt": 5000, "deviations": [] },
+        { "trialId": "v2-right-pronation", "task": "pronation-supination", "side": "right", "deviceId": "wrist-R", "status": "completed", "deviceClockStart": 245080, "syncPulseAt": 5080, "deviations": [] },
+        { "trialId": "v2-walk-a", "task": "walk", "side": "left", "deviceId": "wrist-L", "status": "interrupted", "deviceClockStart": 305000, "syncPulseAt": 5000, "deviations": ["patient-stopped", "trial-incomplete"] },
+        { "trialId": "v2-walk-b", "task": "walk", "side": "left", "deviceId": "wrist-L", "status": "make-up", "makesUpTrialId": "v2-walk-a", "deviceClockStart": 365000, "syncPulseAt": 5000, "deviations": [] },
+        { "trialId": "v2-right-walk", "task": "walk", "side": "right", "deviceId": "wrist-R", "status": "completed", "deviceClockStart": 305080, "syncPulseAt": 5080, "deviations": [] }
+      ],
+      "segments": [
+        { "segmentId": "v2-left-rest-seg1", "trialId": "v2-left-rest", "deviceClockStart": 125000, "deviceClockEnd": 150000, "samples": [0.6, 0.62, 0.58, 0.61, 0.59, 0.63, 0.57, 0.6], "deviations": [] },
+        { "segmentId": "v2-left-rest-seg2", "trialId": "v2-left-rest", "deviceClockStart": 150000, "deviceClockEnd": 155000, "samples": [2.5, 2.6, 2.4], "deviations": ["motion-artifact"] },
+        { "segmentId": "v2-right-rest-seg1", "trialId": "v2-right-rest", "deviceClockStart": 125080, "deviceClockEnd": 155080, "samples": [0.48, 0.5, 0.47, 0.49, 0.51, 0.48, 0.5, 0.49], "deviations": [] },
+        { "segmentId": "v2-left-posture-seg1", "trialId": "v2-left-posture", "deviceClockStart": 185000, "deviceClockEnd": 205000, "samples": [0.65, 0.63, 0.66, 0.64, 0.62, 0.67, 0.63, 0.65], "deviations": [] },
+        { "segmentId": "v2-right-posture-seg1", "trialId": "v2-right-posture", "deviceClockStart": 185080, "deviceClockEnd": 205080, "samples": [0.6, 0.62, 0.59, 0.61, 0.63, 0.6, 0.62, 0.61], "deviations": [] },
+        { "segmentId": "v2-left-pronation-seg1", "trialId": "v2-left-pronation", "deviceClockStart": 245000, "deviceClockEnd": 265000, "samples": [1.02, 1.05, 1.0, 1.03, 1.06, 1.01, 1.04, 1.02], "deviations": [] },
+        { "segmentId": "v2-right-pronation-seg1", "trialId": "v2-right-pronation", "deviceClockStart": 245080, "deviceClockEnd": 265080, "samples": [1.0, 1.02, 0.99, 1.01, 1.03, 1.0, 1.02, 1.01], "deviations": [] },
+        { "segmentId": "v2-walk-a-seg1", "trialId": "v2-walk-a", "deviceClockStart": 305000, "deviceClockEnd": 312000, "samples": [0.41, 0.39], "deviations": ["trial-incomplete"] },
+        { "segmentId": "v2-walk-b-seg1", "trialId": "v2-walk-b", "deviceClockStart": 365000, "deviceClockEnd": 395000, "samples": [0.38, 0.4, 0.37, 0.39, 0.41, 0.38, 0.4, 0.39], "deviations": [] },
+        { "segmentId": "v2-right-walk-seg1", "trialId": "v2-right-walk", "deviceClockStart": 305080, "deviceClockEnd": 335080, "samples": [0.42, 0.44, 0.41, 0.43, 0.45, 0.42, 0.44, 0.43], "deviations": [] }
+      ]
+    }
+  ]
+}

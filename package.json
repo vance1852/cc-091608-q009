@@ -1,1 +1,1 @@
-{"name":"parkinson-motor-assessment","version":"0.1.0","private":true,"type":"module","scripts":{"check":"tsc --noEmit","test":"npm run check"},"devDependencies":{"typescript":"5.9.2"}}
+{"name":"parkinson-motor-assessment","version":"0.1.0","private":true,"type":"module","scripts":{"check":"tsc --noEmit","build":"tsc","test":"npm run check && npm run build && node --test \"dist/test/*.test.js\"","demo":"npm run build && node dist/src/demo.js"},"devDependencies":{"@types/node":"22.10.2","typescript":"5.9.2"}}
