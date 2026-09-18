@@ -1,1 +1,225 @@
-{"patientId":"motor-18","visits":[{"visitId":"v1","protocolVersion":2,"medicationTakenAt":"2026-08-01T08:00:00+08:00","trials":[{"trialId":"v1-left-rest","side":"left","syncPulseAt":1000},{"trialId":"v1-right-rest","side":"right","syncPulseAt":1160}]},{"visitId":"v2","protocolVersion":3,"medicationTakenAt":"2026-09-01T07:30:00+08:00","trials":[{"trialId":"v2-walk-a","status":"interrupted"},{"trialId":"v2-walk-b","status":"make-up"}]}]}
+{
+  "patientId": "motor-18",
+  "capturedBy": "wrist-collector-2.3.1",
+  "exportedAt": "2026-09-01T09:30:00+08:00",
+  "publishedProtocols": [
+    {
+      "protocolId": "parkinson-motor-battery",
+      "version": 2,
+      "publishedAt": "2026-03-01T00:00:00+08:00",
+      "tasks": [
+        { "kind": "rest", "kindLabel": "静息", "durationSeconds": 30, "cueVersion": "rest-cue-v1" },
+        { "kind": "posture", "kindLabel": "姿势", "durationSeconds": 20, "cueVersion": "posture-cue-v1" },
+        { "kind": "pronation-supination", "kindLabel": "旋前旋后", "durationSeconds": 15, "cueVersion": "metronome-v1" },
+        { "kind": "walk", "kindLabel": "步行", "durationSeconds": 30, "cueVersion": "gait-cue-v1" }
+      ]
+    },
+    {
+      "protocolId": "parkinson-motor-battery",
+      "version": 3,
+      "publishedAt": "2026-07-01T00:00:00+08:00",
+      "tasks": [
+        { "kind": "rest", "kindLabel": "静息", "durationSeconds": 30, "cueVersion": "rest-cue-v1" },
+        { "kind": "posture", "kindLabel": "姿势", "durationSeconds": 20, "cueVersion": "posture-cue-v1" },
+        { "kind": "pronation-supination", "kindLabel": "旋前旋后", "durationSeconds": 15, "cueVersion": "metronome-v2" },
+        { "kind": "walk", "kindLabel": "步行", "durationSeconds": 30, "cueVersion": "gait-cue-v1" }
+      ]
+    }
+  ],
+  "visits": [
+    {
+      "visitId": "v1",
+      "protocolVersion": 2,
+      "medicationTakenAt": "2026-08-01T08:00:00+08:00",
+      "trials": [
+        {
+          "trialId": "v1-left-rest",
+          "task": "rest",
+          "side": "left",
+          "deviceClockStart": 100000,
+          "syncPulseAt": 1000,
+          "syncPulseClinicalAt": "2026-08-01T08:58:21.000+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 30,
+          "signal": { "tremorHz": 5.1, "amplitudeG": 0.41, "noiseG": 0.012 }
+        },
+        {
+          "trialId": "v1-right-rest",
+          "task": "rest",
+          "side": "right",
+          "deviceClockStart": 100000,
+          "syncPulseAt": 1160,
+          "syncPulseClinicalAt": "2026-08-01T08:58:21.000+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 30,
+          "signal": { "tremorHz": 4.8, "amplitudeG": 0.38, "noiseG": 0.012 }
+        },
+        {
+          "trialId": "v1-left-posture",
+          "task": "posture",
+          "side": "left",
+          "deviceClockStart": 300000,
+          "syncPulseAt": 299500,
+          "syncPulseClinicalAt": "2026-08-01T09:00:59.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 20,
+          "signal": { "tremorHz": 5.4, "amplitudeG": 0.3, "noiseG": 0.01 }
+        },
+        {
+          "trialId": "v1-right-posture",
+          "task": "posture",
+          "side": "right",
+          "deviceClockStart": 300000,
+          "syncPulseAt": 299500,
+          "syncPulseClinicalAt": "2026-08-01T09:00:59.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 20,
+          "signal": { "tremorHz": 5.0, "amplitudeG": 0.27, "noiseG": 0.01 }
+        },
+        {
+          "trialId": "v1-left-prosup",
+          "task": "pronation-supination",
+          "side": "left",
+          "deviceClockStart": 400000,
+          "syncPulseAt": 399500,
+          "syncPulseClinicalAt": "2026-08-01T09:01:59.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 15,
+          "signal": { "tremorHz": 5.6, "amplitudeG": 0.35, "noiseG": 0.014 }
+        },
+        {
+          "trialId": "v1-right-prosup",
+          "task": "pronation-supination",
+          "side": "right",
+          "deviceClockStart": 400000,
+          "syncPulseAt": 399500,
+          "syncPulseClinicalAt": "2026-08-01T09:01:59.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 15,
+          "signal": { "tremorHz": 5.2, "amplitudeG": 0.33, "noiseG": 0.014 }
+        },
+        {
+          "trialId": "v1-left-walk",
+          "task": "walk",
+          "side": "left",
+          "deviceClockStart": 500000,
+          "syncPulseAt": 499500,
+          "syncPulseClinicalAt": "2026-08-01T09:03:29.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 30,
+          "signal": { "tremorHz": 4.6, "amplitudeG": 0.2, "noiseG": 0.02 }
+        },
+        {
+          "trialId": "v1-right-walk",
+          "task": "walk",
+          "side": "right",
+          "deviceClockStart": 500000,
+          "syncPulseAt": 499500,
+          "syncPulseClinicalAt": "2026-08-01T09:03:29.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 30,
+          "signal": { "tremorHz": 4.4, "amplitudeG": 0.18, "noiseG": 0.02 }
+        }
+      ]
+    },
+    {
+      "visitId": "v2",
+      "protocolVersion": 3,
+      "medicationTakenAt": "2026-09-01T07:30:00+08:00",
+      "trials": [
+        {
+          "trialId": "v2-left-rest",
+          "task": "rest",
+          "side": "left",
+          "deviceClockStart": 600000,
+          "syncPulseAt": 599500,
+          "syncPulseClinicalAt": "2026-09-01T09:04:59.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 30,
+          "signal": { "tremorHz": 5.0, "amplitudeG": 0.22, "noiseG": 0.011 }
+        },
+        {
+          "trialId": "v2-right-rest",
+          "task": "rest",
+          "side": "right",
+          "deviceClockStart": 600000,
+          "syncPulseAt": 599500,
+          "syncPulseClinicalAt": "2026-09-01T09:04:59.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 30,
+          "signal": { "tremorHz": 4.7, "amplitudeG": 0.19, "noiseG": 0.011 }
+        },
+        {
+          "trialId": "v2-left-posture",
+          "task": "posture",
+          "side": "left",
+          "deviceClockStart": 700000,
+          "syncPulseAt": 699500,
+          "syncPulseClinicalAt": "2026-09-01T09:05:59.500+08:00",
+          "status": "completed",
+          "deviations": ["patient-coughed"],
+          "capturedSeconds": 20,
+          "signal": { "tremorHz": 5.3, "amplitudeG": 0.16, "noiseG": 0.012 }
+        },
+        {
+          "trialId": "v2-left-prosup",
+          "task": "pronation-supination",
+          "side": "left",
+          "deviceClockStart": 800000,
+          "syncPulseAt": 799500,
+          "syncPulseClinicalAt": "2026-09-01T09:06:59.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 15,
+          "signal": { "tremorHz": 5.5, "amplitudeG": 0.18, "noiseG": 0.013 }
+        },
+        {
+          "trialId": "v2-right-prosup",
+          "task": "pronation-supination",
+          "side": "right",
+          "deviceClockStart": 800000,
+          "syncPulseAt": 799500,
+          "syncPulseClinicalAt": "2026-09-01T09:06:59.500+08:00",
+          "status": "completed",
+          "deviations": [],
+          "capturedSeconds": 15,
+          "signal": { "tremorHz": 5.1, "amplitudeG": 0.15, "noiseG": 0.013 }
+        },
+        {
+          "trialId": "v2-walk-a",
+          "task": "walk",
+          "side": "left",
+          "deviceClockStart": 900000,
+          "syncPulseAt": 899500,
+          "syncPulseClinicalAt": "2026-09-01T09:08:29.500+08:00",
+          "status": "interrupted",
+          "deviations": ["obstacle-near-bed"],
+          "capturedSeconds": 12,
+          "signal": { "tremorHz": 4.5, "amplitudeG": 0.13, "noiseG": 0.022 }
+        },
+        {
+          "trialId": "v2-walk-b",
+          "task": "walk",
+          "side": "left",
+          "deviceClockStart": 960000,
+          "syncPulseAt": 959500,
+          "syncPulseClinicalAt": "2026-09-01T09:09:29.500+08:00",
+          "status": "make-up",
+          "deviations": [],
+          "capturedSeconds": 30,
+          "signal": { "tremorHz": 4.6, "amplitudeG": 0.12, "noiseG": 0.019 }
+        }
+      ]
+    }
+  ]
+}
